@@ -20,13 +20,13 @@ function drawBoard(size) {
 
     for (let i=0; i<size*size; i++) {
         const block = document.createElement('div');
-        block.textContent = `${i}`
+        //block.textContent = `${i}`
         block.classList.add('grid');
         block.addEventListener('mouseover', hoverStyle);
 
         // resize the container to maintain 960x960px
-        container.style.gridTemplateColumns = `repeat(${size},${PIXELS/size}px)`;
-        container.style.gridTemplateRows = `repeat(${size},${PIXELS/size}px)`;
+        container.style.gridTemplateColumns = `repeat(${size},${Math.round(PIXELS/size)}px)`;
+        container.style.gridTemplateRows = `repeat(${size},${Math.round(PIXELS/size)}px)`;
         container.appendChild(block);
         grid.push(block);
     }
@@ -39,7 +39,7 @@ function hoverStyle(event) {
     console.log('Moused over');
     console.log(event)
     console.log(event.target)
-    event.target.classList.toggle('drawn');
+    event.target.classList.add('drawn');
 }
 
 function removeChildren(node) {
