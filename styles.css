@@ -12,3 +12,7 @@
     text-align: center;
     background-color: lightblue;
 }
+
+.drawn {
+    background-color: gray;
+}
