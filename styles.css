@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    background-color:cadetblue;
+    padding: 10px;
+}
+
+.grid {
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+}
